@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishtha Saxena | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-links">
+
+            <!-- HOME -->
+            <a href="#home" onclick="
+                document.querySelectorAll('.nav-dropdown').forEach(menu => {
+                    menu.open = false;
+                });
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                return false;
+            ">Home</a>
+
+            <!-- ABOUT -->
+            <details class="nav-dropdown" name="portfolio-sections">
+                <summary>About</summary>
+                <div class="nav-content">
+                    <section id="about" class="content-section">
+
+                        <p class="section-label">A LITTLE ABOUT ME</p>
+                        <h2>More than just a business student.</h2>
+
+                        <p>
+                            I am an ambitious and curious individual with a strong interest
+                            in understanding how businesses, markets and people work.
+                            I enjoy exploring ideas, conducting research and looking at
+                            challenges from different perspectives.
+                        </p>
+
+                        <p>
+                            I value communication, collaboration and leadership, and enjoy
+                            taking initiative in situations where I can contribute ideas
+                            and bring people together.
+                        </p>
+
+                        <p>
+                            Beyond academics, my creative interests in painting, baking
+                            and culinary exploration allow me to approach life with
+                            curiosity and imagination.
+                        </p>
+
+                    </section>
+                </div>
+            </details>
+
+            <!-- EDUCATION -->
+            <details class="nav-dropdown" name="portfolio-sections">
+                <summary>Education</summary>
+                <div class="nav-content">
+                    <section id="education" class="content-section">
+
+                        <p class="section-label">MY ACADEMIC JOURNEY</p>
+                        <h2>Education & Academic Background.</h2>
+
+                        <div class="education-card">
+                            <h3>Indian Institute of Management Bangalore</h3>
+                            <p>Bachelor of Business Administration</p>
+                            <p>Digital Business and Entrepreneurship</p>
+                            <p>2026 – 2029</p>
+                        </div>
+
+                        <div class="education-card">
+                            <h3>Jagran Lakecity University</h3>
+                            <p>Bachelor of Management Studies (BMS)</p>
+                            <p>2026 – 2029</p>
+                        </div>
+
+                        <div class="education-card">
+                            <h3>St. Joseph's Convent Senior Secondary Girls' School, Bhopal</h3>
+                            <p>Class 12 – 84% (2025)</p>
+                            <p>Class 10 – 90.2% (2023)</p>
+                            <p>Commerce with Mathematics</p>
+                        </div>
+
+                        <p>
+                            With a keen interest in economics, I enjoy understanding
+                            how markets, businesses and economic decisions shape
+                            the world around us.
+                        </p>
+
+                    </section>
+                </div>
+            </details>
+
+            <!-- SKILLS -->
+            <details class="nav-dropdown" name="portfolio-sections">
+                <summary>Skills</summary>
+                <div class="nav-content">
+                    <section id="skills" class="content-section">
+
+                        <p class="section-label">WHAT I BRING TO THE TABLE</p>
+                        <h2>Skills & Strengths.</h2>
+
+                        <h3>Core Skills</h3>
+                        <ul class="skill-list">
+                            <li>Communication</li>
+                            <li>Leadership</li>
+                            <li>Team Coordination</li>
+                            <li>Analytical Thinking</li>
+                            <li>Research & Information Analysis</li>
+                            <li>Business Research</li>
+                            <li>Presentation Development</li>
+                            <li>Creative Problem-Solving</li>
+                            <li>Video Editing</li>
+                            <li>Collaboration</li>
+                        </ul>
+
+                        <h3>Currently Developing</h3>
+                        <ul class="skill-list">
+                            <li>Microsoft Excel</li>
+                            <li>Business Communication</li>
+                            <li>Digital Business Skills</li>
+                        </ul>
+
+                    </section>
+                </div>
+            </details>
+
+            <!-- PROJECTS & ACHIEVEMENTS -->
+            <details class="nav-dropdown" name="portfolio-sections">
+                <summary>Projects</summary>
+                <div class="nav-content">
+                    <section id="projects" class="content-section">
+
+                        <p class="section-label">MY WORK & EXPERIENCES</p>
+                        <h2>Projects & Achievements.</h2>
+
+                        <h3>Selected Projects & Experience</h3>
+
+                        <div class="project-card">
+                            <p class="project-type">TEAM RESEARCH PROJECT</p>
+                            <h3>Personality & Motivation Survey</h3>
+                            <p>
+                                Collaborated with a team of five to conduct a Big Five
+                                personality and motivation survey involving 30 students
+                                as part of Management Principles and Dynamics of
+                                Organisations. Contributed to analysing the responses
+                                and presenting the findings.
+                            </p>
+                        </div>
+
+                        <div class="project-card">
+                            <p class="project-type">INDUSTRIAL VISIT · 30 OCTOBER 2026</p>
+                            <h3>Decathlon, DB Mall, Bhopal</h3>
+                            <p>
+                                Observed store layout, merchandising and customer
+                                service practices during an industrial visit.
+                                Documented the observations in a visit report.
+                            </p>
+                        </div>
+
+                        <div class="project-card">
+                            <p class="project-type">COURSEWORK</p>
+                            <h3>Business Communication</h3>
+                            <p>
+                                Practised professional communication through
+                                business letters, emails, resume preparation
+                                and LinkedIn profile development.
+                            </p>
+                        </div>
+
+                        <h3>Achievements & Initiative</h3>
+                        <ul class="achievement-list">
+                            <li>Graduated from an Abacus programme.</li>
+                            <li>
+                                Received appreciation for contributions and
+                                coordination across multiple group projects.
+                            </li>
+                        </ul>
+
+                    </section>
+                </div>
+            </details>
+
+            <!-- CONTACT -->
+            <details class="nav-dropdown" name="portfolio-sections">
+                <summary>Contact</summary>
+                <div class="nav-content">
+                    <section id="contact" class="content-section">
+
+                        <p class="section-label">LET'S CONNECT</p>
+                        <h2>Have an opportunity in mind?</h2>
+
+                        <p>
+                            I am always interested in connecting with people,
+                            exploring new opportunities and learning from
+                            meaningful professional experiences.
+                        </p>
+
+                        <p>
+                            <strong>Email:</strong>
+                            <a href="mailto:saxena.nishtha0405@gmail.com">
+                                saxena.nishtha0405@gmail.com
+                            </a>
+                        </p>
+
+                        <p>
+                            <strong>LinkedIn:</strong>
+                            <a href="https://www.linkedin.com/in/nishtha-saxena-3a1a5a36b/" target="_blank"
+                                rel="noopener noreferrer">
+                                Connect with me on LinkedIn
+                            </a>
+                        </p>
+
+                    </section>
+                </div>
+            </details>
+
+        </div>
+    </nav>
+
+    <!-- HOMEPAGE -->
+    <header id="home" class="hero">
+        <div class="hero-layout">
+
+            <div class="hero-text">
+
+                <h1>Hi, I'm Nishtha.</h1>
+
+                <p class="intro-label">
+                    BUSINESS STUDENT · CREATIVE THINKER · CURIOUS MIND
+                </p>
+
+                <p class="hero-description">
+                    Economics, finance & marketing — exploring where ideas meet opportunity.
+                </p>
+
+                <details class="more-about">
+                    <summary>Get to know me</summary>
+
+                    <p>
+                        I am currently pursuing a Bachelor of Business Administration
+                        in Digital Business and Entrepreneurship (BBA DBE) at IIM Bangalore,
+                        alongside my BMS at Jagran Lakecity University.
+                    </p>
+
+                    <p>
+                        I enjoy exploring business ideas through research,
+                        analytical thinking and communication. Outside
+                        academics, I find inspiration in art, baking and
+                        the little details of everyday life.
+                    </p>
+                </details>
+
+            </div>
+
+            <div class="hero-photo">
+                <img src="nishtha.jpg.jpeg" alt="Portrait of Nishtha">
+            </div>
+
+        </div>
+    </header>
+
+</body>
+
+</html>

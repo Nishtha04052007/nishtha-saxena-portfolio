@@ -1,0 +1,601 @@
+/* =================================
+   1. GLOBAL STYLES
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #F4F6FA;
+    color: #263653;
+    line-height: 1.6;
+}
+
+
+/* =================================
+   2. NAVIGATION
+================================= */
+
+.navbar {
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 22px 8%;
+    background-color: #F4F6FA;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a,
+.nav-dropdown summary {
+    position: relative;
+    color: #263653;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    list-style: none;
+    transition: color 0.25s ease;
+}
+
+.nav-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+.nav-links a:hover,
+.nav-dropdown summary:hover {
+    color: #4161C8;
+}
+
+.nav-links a::after,
+.nav-dropdown summary::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 1px;
+    background-color: #4161C8;
+    transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after,
+.nav-dropdown summary:hover::after {
+    width: 100%;
+}
+
+
+/* =================================
+   3. FLOATING NAVIGATION PANELS
+================================= */
+
+.nav-dropdown {
+    position: static;
+}
+
+.nav-content {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 8%;
+    width: min(620px, 84vw);
+    max-height: calc(100vh - 130px);
+    overflow-y: auto;
+
+    background-color: #F4F6FA;
+    border: 1px solid #DCE4FA;
+    border-radius: 18px;
+    box-shadow: 0 15px 45px rgba(24, 43, 64, 0.14);
+
+    z-index: 1001;
+}
+
+.nav-content .content-section {
+    margin: 0;
+    padding: 30px 36px;
+    background-color: transparent;
+    border-radius: 18px;
+}
+
+.content-section {
+    background-color: #F4F6FA;
+    margin: 30px 0;
+    padding: 45px;
+    border-radius: 20px;
+}
+
+.section-label {
+    color: #4161C8;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.content-section h2 {
+    color: #263653;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.content-section h3 {
+    color: #263653;
+    font-size: 17px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.content-section p {
+    color: #263653;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 850px;
+    margin-bottom: 15px;
+}
+
+
+/* Compact text inside floating panels */
+
+.nav-content .content-section h2 {
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.nav-content .content-section h3 {
+    font-size: 16px;
+}
+
+.nav-content .content-section p {
+    font-size: 14px;
+    line-height: 1.75;
+    max-width: 100%;
+    margin-bottom: 12px;
+}
+
+
+/* =================================
+   4. EDUCATION CARDS
+================================= */
+
+.education-card {
+    background: #FFFFFF;
+    color: #263653;
+    border-left: 4px solid #4161C8;
+    border-radius: 10px;
+    padding: 22px;
+    margin: 16px 0;
+    box-shadow: 0 5px 16px rgba(38, 54, 83, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(38, 54, 83, 0.13);
+}
+
+.education-card h3 {
+    color: #263653;
+    margin-top: 0;
+}
+
+.education-card p {
+    color: #263653;
+}
+
+
+/* =================================
+   5. SKILLS
+================================= */
+
+.nav-content .content-section ul {
+    padding-left: 22px;
+    margin-bottom: 18px;
+}
+
+.nav-content .content-section li {
+    color: #263653;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+#skills .skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+}
+
+#skills .skill-list li {
+    background: #FFFFFF;
+    color: #263653;
+    border: 1px solid #DCE4FA;
+    border-radius: 25px;
+    padding: 9px 18px;
+    font-size: 14px;
+    box-shadow: 0 3px 8px rgba(38, 54, 83, 0.07);
+    transition: all 0.2s ease;
+}
+
+#skills .skill-list li:hover {
+    background: #4161C8;
+    color: #FFFFFF;
+    transform: translateY(-3px);
+}
+
+
+/* =================================
+   6. PROJECTS & ACHIEVEMENTS
+================================= */
+
+.project-card {
+    background: #FFFFFF;
+    color: #263653;
+    border: 1px solid #DCE4FA;
+    border-top: 4px solid #4161C8;
+    border-radius: 14px;
+    padding: 24px;
+    margin: 18px 0;
+    box-shadow: 0 5px 18px rgba(38, 54, 83, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(38, 54, 83, 0.13);
+}
+
+.project-card h3 {
+    color: #263653;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.project-card p {
+    color: #263653;
+    margin-bottom: 0;
+}
+
+.project-card .project-type {
+    color: #4161C8;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+}
+
+.achievement-list {
+    list-style: none;
+    padding-left: 0 !important;
+}
+
+.achievement-list li {
+    position: relative;
+    padding: 9px 0 9px 22px;
+    border-bottom: 1px solid #DCE4FA;
+    color: #263653;
+}
+
+.achievement-list li::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    color: #4161C8;
+}
+
+
+/* =================================
+   7. CONTACT
+================================= */
+
+#contact {
+    background: #E8ECF8;
+    border-radius: 18px;
+    padding: 35px;
+}
+
+#contact a {
+    color: #4161C8;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+#contact a:hover {
+    color: #263653;
+    text-decoration: underline;
+}
+
+#contact p,
+#contact li {
+    color: #263653;
+    line-height: 1.8;
+}
+
+.nav-content .content-section a {
+    color: #4161C8;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.nav-content .content-section a:hover {
+    text-decoration: underline;
+}
+
+
+/* =================================
+   8. HOMEPAGE INTRODUCTION
+================================= */
+
+.hero {
+    width: 100%;
+    min-height: calc(100vh - 75px);
+    padding: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+}
+
+.hero-layout {
+    width: 100%;
+    max-width: 1050px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+}
+
+.hero-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    color: #263653;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.hero .intro-label {
+    color: #4161C8;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+.hero .hero-description {
+    color: #263653;
+    width: 100%;
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+
+/* =================================
+   9. PROFILE PHOTOGRAPH
+================================= */
+
+.hero-photo {
+    width: 210px;
+    flex-shrink: 0;
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+
+    border: 6px solid #FFFFFF;
+    border-radius: 12px;
+
+    box-shadow:
+        8px 8px 0 #DCE4FA,
+        12px 14px 24px rgba(38, 54, 83, 0.20);
+
+    transform: rotate(2deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-photo img:hover {
+    transform: rotate(0deg) translateY(-5px);
+    box-shadow:
+        10px 12px 0 #DCE4FA,
+        14px 20px 28px rgba(38, 54, 83, 0.22);
+}
+
+
+/* =================================
+   10. GET TO KNOW ME
+================================= */
+
+.more-about {
+    width: 100%;
+    border-top: 1px solid #263653;
+    padding-top: 25px;
+}
+
+.more-about summary {
+    cursor: pointer;
+    color: #263653;
+    font-weight: bold;
+    font-size: 18px;
+    list-style: none;
+}
+
+.more-about summary::-webkit-details-marker {
+    display: none;
+}
+
+.more-about summary::before {
+    content: "+  ";
+    color: #4161C8;
+}
+
+.more-about[open]>summary::before {
+    content: "−  ";
+}
+
+.more-about p {
+    color: #263653;
+    font-size: 15px;
+    margin-top: 20px;
+    line-height: 1.7;
+}
+
+
+/* =================================
+   11. TABLET RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 24px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .content-section {
+        padding: 25px;
+    }
+
+    .content-section h2 {
+        font-size: 24px;
+    }
+
+}
+
+
+/* =================================
+   12. MOBILE RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 18px 12px;
+    }
+
+    .nav-links {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a,
+    .nav-dropdown summary {
+        font-size: 13px;
+    }
+
+    .nav-content {
+        left: 12px;
+        width: calc(100vw - 24px);
+        max-height: 70vh;
+    }
+
+    .nav-content .content-section {
+        padding: 23px 20px;
+    }
+
+    .nav-content .content-section h2 {
+        font-size: 21px;
+    }
+
+    .nav-content .content-section p,
+    .nav-content .content-section li {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 45px 18px;
+        min-height: calc(100vh - 75px);
+    }
+
+    .hero-layout {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero .intro-label {
+        font-size: 12px;
+    }
+
+    .hero .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-photo {
+        width: 130px;
+    }
+
+    .hero-photo img {
+        height: 180px;
+    }
+
+    .more-about {
+        padding-top: 18px;
+    }
+
+    .more-about summary {
+        font-size: 16px;
+    }
+
+    .more-about p {
+        font-size: 14px;
+    }
+
+    #contact {
+        padding: 22px;
+    }
+
+}
+
+
+/* =================================
+   13. ACCESSIBILITY
+================================= */
+
+a:focus-visible,
+summary:focus-visible {
+    outline: 2px solid #4161C8;
+    outline-offset: 4px;
+}
